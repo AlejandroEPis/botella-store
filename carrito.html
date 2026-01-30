@@ -2,83 +2,62 @@
 <html lang="es-ar">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    <title>ThEbOtTlE | Carrito</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <title>ThEbOtTlE | Carrito</title>
 </head>
+
 <body>
-    <header>
-        <h2>ThEbOtTlE</h2>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="producto.html">Producto</a>
-            <a href="carrito.html">🛒</a>
-            <a href="admin.html">Administrador</a>
-        </nav>
-    </header>
-<main class="carrito">
-  <h1>Carrito de compras</h1>
-
-  <section class="carrito-vacio">
-    <p>Tu carrito está vacío.</p>
-    <a href="producto.html" class="btn">Ver productos</a>
-  </section>
-
-
-  <div class="carrito-contenido">
-
-    <section class="carrito-lista">
+  <header>
+    <h2>ThEbOtTlE</h2>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="producto.html">Producto</a>
+      <a href="carrito.html">🛒</a>
+      <a href="admin.html">Administrador</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Carrito de compras</h1>
+    <section class="ctabla">
 
       <article class="carrito-item">
-        <img src="assets/bnegra.png" alt="ThEbOtTlE negra">
-
-        <div class="item-info">
-          <h2>ThEbOtTlE</h2>
-          <p>Color: Negra</p>
-          <p>$4.500</p>
+        <div class="producto">
+          <img src="assets/bnegra.png" alt="Botella negra">
         </div>
+<div class="prodc">ThEbOtTlE Negra</div>
+        <div class="cantidad" data-cantidad="1">1</div>
+        <div class="precio">$4.500</div>
+        <button class="btn">Eliminar</button>
 
-        <div class="item-cantidad">
-          <input type="number" value="1" min="1">
-        </div>
-
-        <div class="item-subtotal">
-          <p>$4.500</p>
-        </div>
-
-        <button class="btn-eliminar">Eliminar</button>
       </article>
 
     </section>
+    <section class="ctotal">
+  <p>Total:</p>
+  <button class="btn">Finalizar compra</button>
+</section>
 
-    <aside class="carrito-resumen">
-      <h2>Resumen</h2>
-      <p>Total: <strong>$4.500</strong></p>
+  </main>
 
-      <button class="btn">Finalizar compra</button>
-      <button class="btn-secundario">Vaciar carrito</button>
-    </aside>
-
-  </div>
-</main>
-
-    <footer>
-        <div>
-            <a href="index.html">
-                <img src="assets/logo.png" alt="ThEbOtTlE">
-            </a>
-            <nav>
-                <a href="www.instagram.com" target="_blank">
-                    <img src="assets/inst.svg" alt="Instagram">
-                </a>
-                <a href="www.facebook.com" target="_blank">
-                    <img src="assets/face.svg" alt="Facebook">
-                </a>
-            </nav>
-        </div>
-        <p>© 2026 StoreFácil</p>
-    </footer>
+  <footer>
+    <div>
+      <a href="index.html">
+        <img src="assets/logo.png" alt="ThEbOtTlE">
+      </a>
+      <nav>
+        <a href="www.instagram.com" target="_blank">
+          <img src="assets/inst.svg" alt="Instagram">
+        </a>
+        <a href="www.facebook.com" target="_blank">
+          <img src="assets/face.svg" alt="Facebook">
+        </a>
+      </nav>
+    </div>
+    <p>© 2026 StoreFácil</p>
+  </footer>
 </body>
+
 </html>
