@@ -156,6 +156,8 @@ h1 {
     inset 0 -8px 12px rgba(0, 0, 0, 0.5);
 }
 
+
+
 /*Main productos*/
 
 .cproductos {
@@ -185,7 +187,6 @@ h1 {
   flex-direction: column;
   justify-content: space-evenly;
   color: white;
-
   gap: 14px;
 }
 
@@ -213,7 +214,7 @@ h1 {
     0 18px 30px rgba(0, 0, 0, 0.6),
     inset 0 6px 10px rgba(255, 255, 255, 0.15),
     inset 0 -8px 12px rgba(0, 0, 0, 0.5);
-    margin: 2%;
+  margin: 2%;
 }
 
 .desc {
@@ -224,7 +225,7 @@ h1 {
   width: 500px;
 }
 
-.desc p{
+.desc p {
   display: flex;
 
 }
@@ -245,7 +246,7 @@ h1 {
   height: auto;
   border-radius: 50%;
   border: whitesmoke 2px solid;
-
+  
 }
 
 .producto {
@@ -253,7 +254,8 @@ h1 {
   justify-content: center;
 }
 
-.carrito-item .btn, .btnel {
+.carrito-item .btn,
+.btnel {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,6 +280,7 @@ h1 {
   grid-template-columns: 2fr 2fr;
   align-items: center;
   margin: 5%;
+  
 }
 
 .ctotal .btn {
@@ -298,6 +301,10 @@ h1 {
     inset 0 6px 10px rgba(255, 255, 255, 0.15),
     inset 0 -8px 12px rgba(0, 0, 0, 0.5);
 }
+.ctext{
+  color: white;
+  font-weight: 600
+}
 
 /*Main Administrador*/
 .iadmin {
@@ -306,29 +313,26 @@ h1 {
   padding: 1%;
 }
 
-.ahead, .aprod  {
+.ahead,
+.aprod {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
-justify-items: center;
+  justify-items: center;
   margin: 2%;
+  color: white;
+  font-weight: 600
 
 }
-/*.aprod{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
-  align-items: center;
-  justify-items: center;
-margin-top: 2%;
-}*/
-.contbtn{
+
+.contbtn {
   display: flex;
   flex-direction: row;
-  gap:10px;
+  gap: 10px;
 }
 
-.btned{
-    display: flex;
+.btned, .btnadd {
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
@@ -344,4 +348,302 @@ margin-top: 2%;
     0 18px 30px rgba(0, 0, 0, 0.6),
     inset 0 6px 10px rgba(255, 255, 255, 0.15),
     inset 0 -8px 12px rgba(0, 0, 0, 0.5);
+}
+.btnadd{
+  background: #02005c;
+}
+.bagr{
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+
+/*Main Nuevo*/
+
+.fprod{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #02005c;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.btn-float:hover {
+  transform: translateY(-4px);
+  background: #2f005c;
+}
+
+/*Medias*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 2% 0 2% 0;
+
+  }
+
+  /*Main index*/
+  .iprincipal img {
+    width: 100px;
+    height: auto;
+    border-radius: 10%;
+    border: whitesmoke 2px solid;
+    margin: 2%;
+  }
+
+  .ibeneficios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ielegir {
+    display: flex;
+    flex-direction: column;
+    margin: 3% 0 3% 0;
+    padding: 2% 0 2% 0;
+  }
+
+  .ielegir p,
+  .ielegir h3 {
+    margin: 3% 0 3% 0;
+    padding: 2% 0 2% 0;
+    ;
+  }
+
+  .itexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icolor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4% 0 4% 0;
+    padding: 2% 0 2% 0;
+  }
+
+  .icolor a.btn {
+    margin-top: 10%;
+  }
+
+  /*Main productos*/
+
+  .cproductos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111114;
+    border-bottom: 1px solid #1c0135;
+    height: 450px;
+    margin: 2%;
+    padding: 2%;
+  }
+
+  .card img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: whitesmoke 2px solid;
+    margin: 2%;
+  }
+
+  .infob {
+    display: flex;
+    align-items: center;
+  }
+
+  .card h2 {
+    display: flex;
+    margin-top: 2%;
+    text-decoration: underline;
+  }
+
+  .card p {
+    font-weight: 600;
+  }
+
+  .card .btn {
+    width: 100px;
+    height: 80px;
+    text-decoration: none;
+    background: #2f005c;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow:
+      0 18px 30px rgba(0, 0, 0, 0.6),
+      inset 0 6px 10px rgba(255, 255, 255, 0.15),
+      inset 0 -8px 12px rgba(0, 0, 0, 0.5);
+    margin: 5%;
+  }
+
+  .desc {
+    width: 280px;
+
+  }
+
+  .desc p {
+    margin: 6% 0 6% 0;
+
+  }
+
+  /*Main carito*/
+  .ctabla {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    padding: 3%;
+  }
+
+  .carrito-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111114;
+    border-bottom: 1px solid #1c0135;
+    margin: 2%;
+    padding: 3%;
+
+  }
+
+  .carrito-item img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    border: whitesmoke 2px solid;
+    margin: 2%;
+    padding: 3%;
+
+  }
+
+  .producto,
+  .cantidad,
+  .prodc,
+  .precio {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    padding: 3%;
+    font-weight: 600;
+
+  }
+
+  .carrito-item .btn,
+  .btnel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    background: #5c0000;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow:
+      0 18px 30px rgba(0, 0, 0, 0.6),
+      inset 0 6px 10px rgba(255, 255, 255, 0.15),
+      inset 0 -8px 12px rgba(0, 0, 0, 0.5);
+    margin: 2%;
+    padding: 3%;
+  }
+
+  .ctotal {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    margin: 5%;
+    font-weight: 600;
+  }
+
+  .ctotal .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    background: #00095c;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow:
+      0 18px 30px rgba(0, 0, 0, 0.6),
+      inset 0 6px 10px rgba(255, 255, 255, 0.15),
+      inset 0 -8px 12px rgba(0, 0, 0, 0.5);
+    margin: 5%;
+    padding: 3%;
+  }
+
+  /*Main Administrador*/
+  .iadmin {
+    background-color: #111114;
+    border-bottom: 1px solid #1c0135;
+    padding: 2%;
+    margin: 5%;
+  }
+
+  .ahead {
+    display: none;
+
+  }
+
+  .aprod {
+    display: flex;
+    flex-direction: column;
+  gap: 14px;
+  font-weight: 700;
+  margin: 5%;
+  padding: 5%;
+ box-shadow: 0 8px 24px rgba(138, 43, 226, 0.25);
+
+  }
+  
+  .btned , .btnel {
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+
+  }
+
 }
