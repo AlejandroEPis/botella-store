@@ -23,28 +23,26 @@
     <main class="admin">
         <h1>Nueva Botella</h1>
 
-        <form class="iadmin">
+        <form id="formProducto" class="iadmin">
 
             <div class="fprod">
-                <input type="text" placeholder="Nombre" required>
+                <input type="text" id="nombre" placeholder="Nombre" required>
             </div>
 
             <div class="fprod">
-                <input type="text" placeholder="Color" required>
-            </div>
-            <div class="fprod">
-                <input type="text" placeholder="Descripcion" required>
+                <input type="text" id="descripcion" placeholder="Descripcion" required>
             </div>
 
             <div class="fprod">
-                <input type="number" placeholder="Precio" required>
+                <input type="number" id="precio" placeholder="Precio" required>
             </div>
 
             <div class="fprod">
                 <input type="number" id="stock" placeholder="Stock" required>
             </div>
+
             <div class="fprod">
-                <input type="file" accept="image/*">
+                <input type="text" id="imagen" placeholder="Nombre imagen (ej: botella1.png)" required>
             </div>
 
             <div class="fprod">
@@ -54,7 +52,7 @@
         </form>
     </main>
 
-   <a href="admin.html" class="btn-float">←</a>
+    <a href="admin.html" class="btn-float">←</a>
 
 
     <footer>
@@ -74,5 +72,5 @@
         <p>© 2026 StoreFácil</p>
     </footer>
 </body>
-
+<script src="js/nuevo.js"></script>
 </html>
