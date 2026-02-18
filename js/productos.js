@@ -11,64 +11,70 @@ document.addEventListener("DOMContentLoaded", () => {
             Authorization: `Bearer ${TOKEN}`
         }
     })
-    .then(res => res.json())
-    .then(data => {
+        .then(res => res.json())
+        .then(data => {
 
-        container.innerHTML = "";
+            container.innerHTML = "";
 
-        data.records.forEach(record => {
+            data.records.forEach(record => {
 
-            const producto = record.fields;
+                const producto = record.fields;
 
-            const article = document.createElement("article");
-            article.classList.add("card");
+                const article = document.createElement("article");
+                article.classList.add("card");
 
-            article.innerHTML = `
-                <img src="${producto.imagen}" alt="${producto.nombre}">
-                <div class="desc">
-                    <h2>${producto.nombre}</h2>
-                    <p>${producto.descripcion}</p>
-                </div>
-                <div class="infob">
-                    <p>Precio:</p>
-                    <p class="precio">$${producto.precio}</p>
-                    <p>Disponibilidad:</p>
-                    <p class="disponible">Disponible</p>
-                </div>
-                <button class="btn">Comprar</button>
-            `;
+                const stock = Number(producto.stock) || 0;
 
-            const boton = article.querySelector(".btn");
+                article.innerHTML = `
+                            <img src="${producto.imagen}" alt="${producto.nombre}">
+                            <div class="desc">
+                                <h2>${producto.nombre}</h2>
+                                <p>${producto.descripcion}</p>
+                            </div>
+                            <div class="infob">
+                                <p>Precio:</p>
+                                <p class="precio">$${producto.precio}</p>
+                                <p>Disponibilidad:</p>
+                                <p class="disponible ${stock > 0 ? "disponible-ok" : "disponible-no"}">
+                                    ${stock > 0 ? "Disponible" : "Sin disponibilidad"}
+                                </p>
+                            </div>
+                            <button class="btn" ${stock === 0 ? "disabled" : ""}>
+                                ${stock === 0 ? "Sin Stock" : "Comprar"}
+                            </button>
+`;
 
-            boton.addEventListener("click", () => {
+                const boton = article.querySelector(".btn");
 
-                let carrito = localStorage.getItem("cart");
-                carrito = carrito ? JSON.parse(carrito) : [];
+                boton.addEventListener("click", () => {
 
-                const existe = carrito.find(item => item.id === record.id);
+                    let carrito = localStorage.getItem("cart");
+                    carrito = carrito ? JSON.parse(carrito) : [];
 
-                if (existe) {
-                    existe.cantidad += 1;
-                } else {
-                    carrito.push({
-                        id: record.id,
-                        nombre: producto.nombre,
-                        precio: producto.precio,
-                        imagen: producto.imagen,
-                        cantidad: 1
-                    });
-                }
+                    const existe = carrito.find(item => item.id === record.id);
 
-                localStorage.setItem("cart", JSON.stringify(carrito));
+                    if (existe) {
+                        existe.cantidad += 1;
+                    } else {
+                        carrito.push({
+                            id: record.id,
+                            nombre: producto.nombre,
+                            precio: producto.precio,
+                            imagen: producto.imagen,
+                            cantidad: 1
+                        });
+                    }
 
-                alert("Producto agregado al carrito");
+                    localStorage.setItem("cart", JSON.stringify(carrito));
+
+                    alert("Producto agregado al carrito");
+                });
+
+                container.appendChild(article);
+
             });
 
-            container.appendChild(article);
-
-        });
-
-    })
-    .catch(error => console.error("Error:", error));
+        })
+        .catch(error => console.error("Error:", error));
 
 });

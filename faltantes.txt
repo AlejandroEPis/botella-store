@@ -1,0 +1,31 @@
+
+
+Producto:
+
+Texto disponibilidad
+Si no hay stock que no se pueda comprar.
+
+Carrito:
+
+
+Administracion:
+
+botones editar css y animacion
+
+
+Nuevo producto.
+
+Darmas css
+
+
+todo el proyecto:
+
+revisar codigo duplicado.
+
+Medias.
+
+Alertas
+
+
+
+

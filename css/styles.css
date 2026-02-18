@@ -154,6 +154,8 @@ h1 {
     0 18px 30px rgba(0, 0, 0, 0.6),
     inset 0 6px 10px rgba(255, 255, 255, 0.15),
     inset 0 -8px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
 
@@ -215,6 +217,8 @@ h1 {
     inset 0 6px 10px rgba(255, 255, 255, 0.15),
     inset 0 -8px 12px rgba(0, 0, 0, 0.5);
   margin: 2%;
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .desc {
@@ -228,6 +232,21 @@ h1 {
 .desc p {
   display: flex;
 
+}
+
+.disponible-ok {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.disponible-no {
+  color: #ff3b3b;
+  font-weight: bold;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /*Main Carrito*/
@@ -246,7 +265,7 @@ h1 {
   height: auto;
   border-radius: 50%;
   border: whitesmoke 2px solid;
-  
+
 }
 
 .producto {
@@ -255,7 +274,8 @@ h1 {
 }
 
 .carrito-item .btn,
-.btnel {
+.btnel,
+.btnC {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,7 +300,7 @@ h1 {
   grid-template-columns: 2fr 2fr;
   align-items: center;
   margin: 5%;
-  
+
 }
 
 .ctotal .btn {
@@ -301,7 +321,8 @@ h1 {
     inset 0 6px 10px rgba(255, 255, 255, 0.15),
     inset 0 -8px 12px rgba(0, 0, 0, 0.5);
 }
-.ctext{
+
+.ctext {
   color: white;
   font-weight: 600
 }
@@ -322,7 +343,6 @@ h1 {
   margin: 2%;
   color: white;
   font-weight: 600
-
 }
 
 .contbtn {
@@ -331,7 +351,9 @@ h1 {
   gap: 10px;
 }
 
-.btned, .btnadd {
+.btned,
+.btnadd,
+.btnG {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,25 +371,46 @@ h1 {
     inset 0 6px 10px rgba(255, 255, 255, 0.15),
     inset 0 -8px 12px rgba(0, 0, 0, 0.5);
 }
-.btnadd{
+
+.btnadd,
+.btnG {
   background: #02005c;
 }
-.bagr{
+
+.bagr {
   display: flex;
   justify-content: center;
   margin: 2%;
 }
 
 /*Main Nuevo*/
-
-.fprod{
+.mnuevo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2%;
-  color: white;
-  font-weight: 600;
 }
+
+.inuev {
+  background-color: #111114;
+  border-bottom: 1px solid #1c0135;
+  gap: 2%;
+  padding: 4%;
+}
+
+
+.fprod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15%;
+ font-weight: 600;
+}
+
+.fprod input {
+  padding: 12px 16px;
+}
+
+
 
 .btn-float {
   position: fixed;
@@ -384,9 +427,21 @@ h1 {
   z-index: 999;
 }
 
-.btn-float:hover, .btnadd:hover, .ctotal:hover .btn:hover {
+.btn-float:hover,
+.btnadd:hover,
+.ctotal:hover .btn:hover,
+.btnel:hover,
+.btned:hover,
+.btnG:hover,
+.btnC:hover {
   transform: translateY(-4px);
   background: #2f005c;
+}
+
+.icolor .btn:hover,
+.card .btn:hover {
+  transform: translateY(-4px);
+  background: #02005c;
 }
 
 /*Medias*/
@@ -510,6 +565,8 @@ h1 {
       inset 0 6px 10px rgba(255, 255, 255, 0.15),
       inset 0 -8px 12px rgba(0, 0, 0, 0.5);
     margin: 5%;
+    transition: all 0.3s ease;
+    z-index: 999;
   }
 
   .desc {
@@ -583,6 +640,8 @@ h1 {
       inset 0 -8px 12px rgba(0, 0, 0, 0.5);
     margin: 2%;
     padding: 3%;
+    transition: all 0.3s ease;
+    z-index: 999;
   }
 
   .ctotal {
@@ -631,15 +690,16 @@ h1 {
   .aprod {
     display: flex;
     flex-direction: column;
-  gap: 14px;
-  font-weight: 700;
-  margin: 5%;
-  padding: 5%;
- box-shadow: 0 8px 24px rgba(138, 43, 226, 0.25);
+    gap: 14px;
+    font-weight: 700;
+    margin: 5%;
+    padding: 5%;
+    box-shadow: 0 8px 24px rgba(138, 43, 226, 0.25);
 
   }
-  
-  .btned , .btnel {
+
+  .btned,
+  .btnel {
     font-size: 20px;
     width: 100px;
     height: 100px;

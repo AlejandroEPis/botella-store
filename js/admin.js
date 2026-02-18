@@ -56,13 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <input type="number" value="${producto.precio || 0}">
             <input type="number" value="${producto.stock || 0}">
             <div class="contbtn">
-                <button class="btnGuardar">Guardar</button>
-                <button class="btnCancelar">Cancelar</button>
+                <button class="btnG">Guardar</button>
+                <button class="btnC">Cancelar</button>
             </div>
         `;
 
-        const btnGuardar = article.querySelector(".btnGuardar");
-        const btnCancelar = article.querySelector(".btnCancelar");
+        const btnGuardar = article.querySelector(".btnG");
+        const btnCancelar = article.querySelector(".btnC");
 
         btnGuardar.addEventListener("click", async () => {
 
